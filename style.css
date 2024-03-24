@@ -1,0 +1,486 @@
+body {
+
+    /* set body font-family to Lato and sans-serif as fallback */
+  
+    font-family: 'Lato', sans-serif;
+  
+    /* center content by flex, height 100vh, margin 0, background gray */
+  
+    display: flex;
+  
+    justify-content: center;
+  
+    align-items: center;
+  
+    height: 100vh;
+  
+    margin: 0;
+  
+    background: #eee;
+  
+  }
+  
+  
+  .pizza-form {
+  
+    /* set pizza-form styles:
+  
+      background white, padding 40px,
+  
+      border-radius 10px, box-shadow 0 0 10px rgba(0, 0, 0, 0.2),
+  
+      width 100% or max 600px,
+  
+      position relative
+  
+    */
+  
+    background: #fff;
+  
+    padding: 40px;
+  
+    border-radius: 10px;
+  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  
+    width: 100%;
+  
+    max-width: 600px;
+  
+    position: relative;
+  
+  }
+  
+  
+  .title {
+  
+    /* set title styles:
+  
+      center position and margin
+  
+    */
+  
+    margin: 0 0 30px;
+  
+    text-align: center;
+  
+  }
+  
+  
+  .input-group {
+  
+    /* set input-group styles:
+  
+      margin 20px 0
+  
+    */
+  
+    margin: 20px 0;
+  
+  }
+  
+  
+  label {
+  
+    /* set label styles:
+  
+      display block,
+  
+      margin 10px 0 0,
+  
+      font-weight 500,
+  
+      color #333
+  
+    */
+  
+    display: block;
+  
+    margin: 10px 0 0;
+  
+    font-weight: 500;
+  
+    color: #333;
+  
+  }
+  
+  
+  input,
+  
+  select {
+  
+    /* set input and select styles:
+  
+      display block,
+  
+      width 100%,
+  
+      padding 10px,
+  
+      font-size 16px,
+  
+      border 1px solid #ddd,
+  
+      border-radius 5px
+  
+    */
+  
+    display: block;
+  
+    width: 100%;
+  
+    padding: 10px;
+  
+    font-size: 16px;
+  
+    border: 1px solid #ddd;
+  
+    border-radius: 5px;
+  
+  }
+  /* Style for select element */
+select {
+    /* Remove default appearance */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  
+    /* Add custom arrow background */
+    background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-5 0 15 10' preserveAspectRatio='none'><polygon points='-4,0 5,7 5,0' fill='currentColor'/></svg>");
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    background-size: 15px 10px;
+  
+    /* Set cursor style */
+    cursor: pointer;
+  }
+  
+  /* Style for checkbox input */
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  /* Style for checkbox label */
+  input[type="checkbox"] + label::before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #ccc;
+    background: #fff;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 25px;
+  }
+  
+  /* Style for checked checkbox label */
+  input[type="checkbox"]:checked + label::before {
+    content: "✔";
+    font-size: 18px;
+    font-weight: 700;
+    background: #333;
+    color: #fff;
+  }
+  
+  /* Style for toppings container */
+  .toppings {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
+  
+  /* Style for topping element */
+  .topping {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    background: #f5f5f5;
+    cursor: pointer;
+  }
+  
+  /* Style for hovered topping element */
+  .topping:hover {
+    background: #eee;
+  }
+  
+  /* Style for button */
+  button {
+    display: block;
+    background: #fb6c6c;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px auto;
+    transition: background 0.3s ease;
+  }
+  
+  /* Style for button on hover */
+button:hover {
+    background: #ef4545;
+  }
+  
+  /* Style for success message */
+  .success-message {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+  }
+  
+  /* Style for hidden element */
+  .hide {
+    display: none;
+  }
+  
+  /* Style for body */
+  body {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #eee;
+  }
+  
+  /* Style for pizza form */
+  .pizza-form {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+  }
+  
+  /* Style for title */
+
+.title {
+
+    margin: 0 0 30px;
+  
+    text-align: center;
+  
+  }
+  
+  
+  /* Style for input group */
+  
+  .input-group {
+  
+    margin: 20px 0;
+  
+  }
+  
+  
+  /* Style for label */
+  
+  label {
+  
+    display: block;
+  
+    margin: 10px 0 0;
+  
+    font-weight: 500;
+  
+    color: #333;
+  
+  }
+  
+  
+  /* Style for input and select */
+  
+  input, select {
+  
+    display: block;
+  
+    width: 100%;
+  
+    padding: 10px;
+  
+    font-size: 16px;
+  
+    border: 1px solid #ddd;
+  
+    border-radius: 5px;
+  
+  }
+  
+  
+  /* Style for select */
+  
+  select {
+  
+    appearance: none;
+  
+    -webkit-appearance: none;
+  
+    -moz-appearance: none;
+  
+    background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-5 0 15 10' preserveAspectRatio='none'><polygon points='-4,0 5,7 5,0' fill='currentColor'/></svg>");
+  
+    background-repeat: no-repeat;
+  
+    background-position: 100% 50%;
+  
+    background-size: 15px 10px;
+  
+    cursor: pointer;
+  
+  }
+  
+  
+  /* Style for checkbox */
+  
+  input[type="checkbox"] {
+  
+    display: none;
+  
+  }
+  
+  
+  /* Style for checkbox label */
+  
+  input[type="checkbox"] + label::before {
+  
+    content: "";
+  
+    display: inline-block;
+  
+    width: 25px;
+  
+    height: 25px;
+  
+    border: 1px solid #ccc;
+  
+    background: #fff;
+  
+    margin-right: 10px;
+  
+    text-align: center;
+  
+    line-height: 25px;
+  
+  }
+  
+  
+  /* Style for checked checkbox label */
+  
+  input[type="checkbox"]:checked + label::before {
+  
+    content: "✔";
+  
+    font-size: 18px;
+  
+    font-weight: 700;
+  
+    background: #333;
+  
+    color: #fff;
+  
+  }
+  
+  
+  /* Style for toppings container */
+  
+  .toppings {
+  
+    display: flex;
+  
+    flex-wrap: wrap;
+  
+    margin: 20px 0;
+  
+  }
+  
+  
+  /* Style for topping */
+  
+  .topping {
+  
+    margin: 5px;
+  
+    padding: 5px;
+  
+    border-radius: 5px;
+  
+    background: #f5f5f5;
+  
+    cursor: pointer;
+  
+  }
+  
+  
+  /* Style for hovered topping */
+  
+  .topping:hover {
+  
+    background: #eee;
+  
+  }
+  
+  
+  /* Style for button */
+  
+  button {
+  
+    display: block;
+  
+    background: #fb6c6c;
+  
+    color: #fff;
+  
+    padding: 10px;
+  
+    border: none;
+  
+    border-radius: 5px;
+  
+    cursor: pointer;
+  
+    margin: 20px auto;
+  
+    transition: background 0.3s ease;
+  
+  }
+  
+  button:hover {
+    background: #ef4545;
+  }
+  
+  .success-message {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 600px) {
+    .pizza-form {
+      padding: 20px;
+    }
+  
+    .input-group {margin: 10px 0;
+    }
+  
+    button {
+      margin: 10px auto;
+    }
+  }
+  
